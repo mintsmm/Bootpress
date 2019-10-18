@@ -1,5 +1,6 @@
 /node_modules/**
 /vendor/**
-/assets/dist/**
-
+/assets/dist/js/bootstrap.js
+/assets/dist/js/app.js
+/assets/dist/js/gutenberg.js
 webpack.mix.js
