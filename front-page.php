@@ -14,12 +14,14 @@
 
 get_header();
 ?>
-
+<!-- Carousel Start -->
+    <?php get_template_part('template-parts/content', 'carousel'); ?>
+<!-- Carousel End -->
 <div class="container mt-4">
 
 	<div class="row">
 
-		<div class="col-lg-9">
+		<div class="col-lg-12">
 
 			<div id="primary" class="content-area page-template">
 
@@ -41,9 +43,6 @@ get_header();
 
 				</main><!-- #main -->
 			</div><!-- #primary -->
-		</div>
-		<div class="col-lg-3">
-			<?php get_sidebar(); ?>
 		</div>
 	</div>
 </div>

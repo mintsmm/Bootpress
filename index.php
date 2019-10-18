@@ -19,7 +19,7 @@ get_header();
 
 	<div class="row">
 
-		<div class="col-lg-9">
+		<div class="<?php echo get_theme_mod('bootpress_navbar_sidebar_col'); ?>">
 
 			<div id="primary" class="content-area">
 
@@ -31,7 +31,7 @@ get_header();
 
                     if (is_home() && ! is_front_page()) :
                         ?>
-						<header>
+						<header class="card card-body mb-4">
 
 							<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 
@@ -68,7 +68,7 @@ get_header();
 
 		</div>
 
-		<div class="col-lg-3">
+		<div class="<?php echo get_theme_mod('bootpress_navbar_sidebar_col'); ?>">
 
 			<?php get_sidebar(); ?>
 

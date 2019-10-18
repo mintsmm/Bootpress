@@ -13,9 +13,9 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer bg-dark">
+	<footer id="colophon" class="site-footer <?php echo get_theme_mod('bootpress_footer_background'); ?>">
         <div class="container">
-            <div class="site-info">
+            <div class="site-info <?php echo get_theme_mod('bootpress_footer_text_color'); ?>">
                 <?php echo get_theme_mod('bootpress_footer_text'); ?>
             </div><!-- .site-info -->
         </div>

@@ -27,7 +27,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text d-none" href="#content"><?php esc_html_e('Skip to content', 'bootpress'); ?></a>
 
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<nav class="navbar navbar-expand-lg <?php echo get_theme_mod('bootpress_navbar_text_color'); ?> <?php echo get_theme_mod('bootpress_navbar_background'); ?> <?php echo get_theme_mod('bootpress_navbar_shadow'); ?>">
 		<div class="container">
 			<a href="<?php echo esc_url(home_url('/')); ?>" class="navbar-brand"><?php bloginfo('name'); ?></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#primarNavbar" aria-controls="primarNavbar" aria-expanded="false" aria-label="Toggle navigation">

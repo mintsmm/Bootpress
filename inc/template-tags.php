@@ -14,9 +14,6 @@ if (! function_exists('bootpress_posted_on')) :
     function bootpress_posted_on()
     {
         $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-        if (get_the_time('U') !== get_the_modified_time('U')) {
-            $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
-        }
 
         $time_string = sprintf(
             $time_string,
@@ -126,25 +123,18 @@ if (! function_exists('bootpress_post_thumbnail')) :
             return;
         }
 
-        if (is_singular()) :
-            ?>
-
-			<div class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
-			</div><!-- .post-thumbnail -->
+        if ( is_singular() ) :
+			?>
+			<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' ); ?>
+			<img src="<?php echo $url; ?>" alt="" class="img-fluid">
 
 		<?php else : ?>
-
+		<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' ); ?>
 		<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-			<?php
-            the_post_thumbnail('post-thumbnail', array(
-                'alt' => the_title_attribute(array(
-                    'echo' => false,
-                )),
-            )); ?>
+			<img src="<?php echo $url; ?>" alt="" class="img-fluid">
 		</a>
 
 		<?php
-        endif; // End is_singular().
+		endif; // End is_singular().
     }
 endif;
