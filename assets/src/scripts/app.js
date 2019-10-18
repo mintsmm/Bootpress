@@ -1,2 +1,2 @@
-import 'slick-carousel';
-import 'jquery-ui';
+// import 'slick-carousel';
+// import 'jquery-ui';
