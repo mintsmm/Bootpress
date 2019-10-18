@@ -1,0 +1,68 @@
+/*!
+Theme Name: Bootpress
+Theme URI: https://github.com/mintsmm
+Author: Tristan Elliott
+Author URI: https://github.com/mintsmm
+Description: Bootpress
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: bootpress
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+
+body {
+  font-family: "Montserrat", sans-serif !important;
+  background-color: whitesmoke !important;
+  font-weight: 300 !important;
+  font-size: 17px !important;
+}
+
+.site-footer {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  color: #fff;
+}
+
+.site-footer a {
+  color: #fff;
+}
+
+.site-footer a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.card {
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.widget ul {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.widget ul li {
+  position: relative;
+  display: block;
+  padding: 0.75rem 0;
+  margin-bottom: -1px;
+  background-color: #fff;
+}
+
+.widget ul li a {
+  color: #333;
+}
+
+.widget ul li a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.form-control {
+  border-radius: 0 !important;
+}
+
