@@ -25,7 +25,7 @@ matrix:
             - composer install --ansi --prefer-dist --no-suggest
             # Install ESLint shareable config for WordPress.
             # @link https://github.com/WordPress-Coding-Standards/eslint-config-wordpress
-            - npm install eslint @wordpress/eslint-plugin
+            - npm install eslint eslint-config-wordpress
           # Run test script commands.
           # Default is specific to project language.
           # All commands must exit with code 0 on success. Anything else is considered failure.
