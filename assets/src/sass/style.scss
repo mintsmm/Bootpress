@@ -33,9 +33,23 @@ body {
 .card {
   border: none!important;
   border-radius: 0!important;
+  background-color: #fff!important;
+  .card-header {
+    border: none!important;
+    border-radius: 0!important;
+    background-color: #fff!important;
+  }
+  .card-footer {
+    border: none!important;
+    border-radius: 0!important;
+    background-color: #fff!important;
+  }
 }
 
 .widget {
+  .widget-title {
+    font-size: 25px;
+  }
   ul {
     display: -ms-flexbox;
     display: flex;

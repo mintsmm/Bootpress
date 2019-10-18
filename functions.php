@@ -108,7 +108,7 @@ function bootpress_widgets_init() {
 		'name'          => esc_html__( 'Sidebar', 'bootpress' ),
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Add widgets here.', 'bootpress' ),
-		'before_widget' => '<section id="%1$s" class="widget card card-body mb-5 %2$s">',
+		'before_widget' => '<section id="%1$s" class="widget card card-body mb-4 %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',

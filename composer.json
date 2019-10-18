@@ -1,0 +1,19 @@
+{
+    "name": "user/bootpress",
+    "description": "WordPress Development Theme",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tristan Elliott",
+            "email": "tristan@mintsmm.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+		"jakub-onderka/php-parallel-lint": "^1.0.0",
+		"phpcompatibility/phpcompatibility-wp": "^2.0.0",
+		"wp-coding-standards/wpcs": "^2.0.0",
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.5.0"
+	}
+}

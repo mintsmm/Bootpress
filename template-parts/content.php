@@ -9,18 +9,18 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" class="card card-body">
-	<header class="entry-header">
+<article id="post-<?php the_ID(); ?>" class="card mb-4">
+	<header class="card-header">
 		<?php
 		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			the_title( '<h1 class="card-title">', '</h1>' );
 		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			the_title( '<h2 class="card-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
 		if ( 'post' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
+			<div class="card-meta">
 				<?php
 				bootpress_posted_on();
 				bootpress_posted_by();
@@ -31,7 +31,7 @@
 
 	<?php bootpress_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="card-body">
 		<?php
 		the_content( sprintf(
 			wp_kses(
@@ -53,7 +53,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+	<footer class="card-footer">
 		<?php bootpress_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

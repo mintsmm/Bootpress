@@ -36,6 +36,23 @@ body {
 .card {
   border: none !important;
   border-radius: 0 !important;
+  background-color: #fff !important;
+}
+
+.card .card-header {
+  border: none !important;
+  border-radius: 0 !important;
+  background-color: #fff !important;
+}
+
+.card .card-footer {
+  border: none !important;
+  border-radius: 0 !important;
+  background-color: #fff !important;
+}
+
+.widget .widget-title {
+  font-size: 25px;
 }
 
 .widget ul {
