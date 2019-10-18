@@ -16,7 +16,7 @@
 	<footer id="colophon" class="site-footer bg-dark">
         <div class="container">
             <div class="site-info">
-                <?php echo get_theme_mod( 'bootpress_footer_text' ); ?>
+                <?php echo get_theme_mod('bootpress_footer_text'); ?>
             </div><!-- .site-info -->
         </div>
 	</footer><!-- #colophon -->
