@@ -14,9 +14,13 @@
 
 get_header();
 ?>
+
 <!-- Carousel Start -->
+
     <?php get_template_part('template-parts/content', 'carousel'); ?>
+    
 <!-- Carousel End -->
+
 <div class="container mt-4">
 
 	<div class="row">

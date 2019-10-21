@@ -30,7 +30,7 @@
 	<nav class="navbar navbar-expand-lg <?php echo get_theme_mod('bootpress_navbar_text_color'); ?> <?php echo get_theme_mod('bootpress_navbar_background'); ?> <?php echo get_theme_mod('bootpress_navbar_shadow'); ?>">
 		<div class="container">
 			<a href="<?php echo esc_url(home_url('/')); ?>" class="navbar-brand"><?php bloginfo('name'); ?></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#primarNavbar" aria-controls="primarNavbar" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#primaryNavbar" aria-controls="primaryNavbar" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<?php
@@ -39,7 +39,7 @@
                     'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
                     'container'       => 'div',
                     'container_class' => 'collapse navbar-collapse',
-                    'container_id'    => 'primarNavbar',
+                    'container_id'    => 'primaryNavbar',
                     'menu_class'      => 'navbar-nav ml-auto',
                     'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
                     'walker'          => new WP_Bootstrap_Navwalker(),

@@ -136,9 +136,21 @@ add_action('wp_enqueue_scripts', 'bootpress_scripts');
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
+
+/**
+ * Implement the Bootstrap navealker
+ */
 require get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
 
+/**
+ * Implement the Gutenberg Custom Blocks
+ */
 require get_template_directory() . '/inc/gutenberg.php';
+
+/**
+ * Implement the Custom carousel feature.
+ */
+require get_template_directory() . '/inc/carousel.php';
 
 /**
  * Custom template tags for this theme.

@@ -9,10 +9,15 @@
 
 get_header();
 ?>
+
 <div class="container">
+
 	<div class="row">
+
 		<div class="col-lg-9">
+
 			<div id="primary" class="content-area">
+
 				<main id="main" class="site-main">
 
 				<?php if (have_posts()) : ?>
@@ -47,16 +52,21 @@ get_header();
                 endif;
                 ?>
 
-				</main><!-- #main -->
-			</div><!-- #primary -->
+				</main>
+
+			</div>
+
 		</div>
+
 		<div class="col-lg-3">
+
 			<?php get_sidebar(); ?>
+
 		</div>
+
 	</div>
+
 </div>
-	
 
 <?php
-
 get_footer();
