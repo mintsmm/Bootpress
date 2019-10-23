@@ -19,7 +19,7 @@ get_header();
 
 	<div class="row">
 
-		<div class="<?php echo get_theme_mod('bootpress_navbar_sidebar_col'); ?>">
+		<div class="col-lg-8">
 
 			<div id="primary" class="content-area">
 
@@ -68,7 +68,7 @@ get_header();
 
 		</div>
 
-		<div class="<?php echo get_theme_mod('bootpress_navbar_sidebar_col'); ?>">
+		<div class="col-lg-4">
 
 			<?php get_sidebar(); ?>
 

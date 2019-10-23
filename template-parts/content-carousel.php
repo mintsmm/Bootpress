@@ -6,13 +6,13 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="http://bootpress.co.za/wp-content/uploads/2019/10/php-illustration.png" class="d-block w-100" alt="...">
+      <img src="<?php echo get_theme_mod('bootpress_imageuploader_1'); ?>" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="http://bootpress.co.za/wp-content/uploads/2019/10/php-illustration.png" class="d-block w-100" alt="...">
+      <img src="<?php echo get_theme_mod('bootpress_imageuploader_2'); ?>" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="http://bootpress.co.za/wp-content/uploads/2019/10/php-illustration.png" class="d-block w-100" alt="...">
+      <img src="<?php echo get_theme_mod('bootpress_imageuploader_3'); ?>" class="d-block w-100" alt="...">
     </div>
   </div>
   <div class="container">

@@ -129,6 +129,7 @@ function bootpress_scripts()
     
     wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/assets/dist/css/bootstrap.css', array(), '4.3.1', 'all');
     wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/dist/js/bootstrap.js', array( 'jquery' ), '4.3.1', true);
+
 }
 add_action('wp_enqueue_scripts', 'bootpress_scripts');
 
@@ -164,8 +165,11 @@ require get_template_directory() . '/inc/template-functions.php';
 
 /**
  * Customizer additions.
+ * Custom Controls
+ * @since 1.0.0
  */
 require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/customizer/custom-controls/custom-controls.php';
 
 /**
  * Load Jetpack compatibility file.

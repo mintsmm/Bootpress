@@ -49,6 +49,11 @@ function bootpress_customize_register($wp_customize)
         'title'             => __('Sidebar', 'bootpress'),
         'panel'             => 'bootpress_layout_panel',
     ));
+    
+    $wp_customize->add_section('bootpress_carousel_section', array(
+        'title'             => __('Carousel', 'bootpress'),
+        'panel'             => 'bootpress_layout_panel',
+    ));
 
     // Create our settings
 
@@ -195,6 +200,46 @@ function bootpress_customize_register($wp_customize)
               'col-lg-12' => __('Column 12', 'bootpress'),
             ),
     ));
+    $wp_customize->add_setting( 'bootpress_carousel_image_uploader' , array(
+        'type'          => 'theme_mod',
+        'transport'     => 'refresh',
+    ) );
+    $wp_customize->add_control( 'bootpress_carousel_image_uploader_control', array(
+        'label'      => __('Carousel Image', 'bootpress'),
+        'section'    => 'bootpress_carousel_section',
+        'settings'   => 'bootpress_carousel_image_uploader',
+        'type'       => 'image',
+    ) );
+    $wp_customize->add_setting( 'bootpress_imageuploader_1' , array(
+        'type'          => 'theme_mod',
+        'transport'     => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize,'bootpress_imageuploader_control_1', array(
+        'label'      => __('Carousel Image One', 'bootpress'),
+        'section'    => 'bootpress_carousel_section',
+        'settings'   => 'bootpress_imageuploader_1',
+        'type'       => 'upload',
+    ) ) );
+    $wp_customize->add_setting( 'bootpress_imageuploader_2' , array(
+        'type'          => 'theme_mod',
+        'transport'     => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize,'bootpress_imageuploader_control_2', array(
+        'label'      => __('Carousel Image Two', 'bootpress'),
+        'section'    => 'bootpress_carousel_section',
+        'settings'   => 'bootpress_imageuploader_2',
+        'type'       => 'upload',
+    ) ) );
+    $wp_customize->add_setting( 'bootpress_imageuploader_3' , array(
+        'type'          => 'theme_mod',
+        'transport'     => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize,'bootpress_imageuploader_control_3', array(
+        'label'      => __('Carousel Image Three', 'bootpress'),
+        'section'    => 'bootpress_carousel_section',
+        'settings'   => 'bootpress_imageuploader_3',
+        'type'       => 'upload',
+    ) ) );
 }
 add_action('customize_register', 'bootpress_customize_register');
 
@@ -223,6 +268,13 @@ function bootpress_customize_partial_blogdescription()
  */
 function bootpress_customize_preview_js()
 {
-    wp_enqueue_script('bootpress-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true);
+    wp_enqueue_script('bootpress-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '1.0.0', true);
+    wp_enqueue_script('bootpress-customizer-preview', get_template_directory_uri() . '/assets/dist/js/customizer-preview.js', array( 'customize-preview' ), '1.0.0', true);
 }
 add_action('customize_preview_init', 'bootpress_customize_preview_js');
+
+function bootpress_customizer_enqueue(){
+    wp_register_style( 'customizer-fontawesome', get_template_directory_uri() . '/assets/dist/css/fontawesome-all.min.css' , array(), '5.8.2', 'all' );
+    wp_enqueue_style( 'customizer-fontawesome' );
+}
+add_action( 'wp_enqueue_scripts', 'bootpress_customizer_enqueue' );
